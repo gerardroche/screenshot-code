@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit backupGlobals="false"
-         backupStaticAttributes="false"
-         beStrictAboutOutputDuringTests="true"
-         beStrictAboutTestSize="true"
-         beStrictAboutTestsThatDoNotTestAnything="true"
-         beStrictAboutTodoAnnotatedTests="true"
-         checkForUnintentionallyCoveredCode="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         forceCoversAnnotation="true"
-         verbose="true"
-         >
+         verbose="true">
 
     <php>
         <ini name="date.timezone" value="UTC" />
