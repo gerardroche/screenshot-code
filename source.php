@@ -19,34 +19,3 @@ $app->get('/hello[/{name}]', function ($request, $response, $args) {
 })->setArgument('name', 'World!');
 
 $app->run();
-
-
-
-/*
-aaaaaaa
-aaa
-aaaa
-aaa
-
-
-
-as
-
-
-asdfasdfaaa
-sadfasfaaaa
-
-
-asdfasdf
-
-
-asdfasdfas
-a
-sdf
-as
-df
-as
-df
-asd
-fasd
-
