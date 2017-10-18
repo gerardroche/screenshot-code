@@ -1,3 +1,19 @@
+
+class HTMLProcessor
+
+    def start_parsing(scope_name)
+        @line = ""
+        @offset = 0
+        @text = []
+    end
+
+    def end_parsing(scope_name)
+        @text.each_with_index do |line, index|
+            @text[index] = "<span class=\"l l-#{index+1} #{scope_name.gsub('.', ' ')}\">"
+        end
+        puts @text.join("")
+end
+
 x = nil
 x = false
 x = __dir__

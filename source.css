@@ -1,37 +1,26 @@
-/* comment */
-
-@font-face {
-    font-family: Chunkfive; src: url('Chunkfive.otf');
+body {
+    font-family: arial;
 }
 
-body, #id, .class, div.class {
-    font-family: Chunkfive, monospace, sans-serif;
-    font-size: 14px;
-    display: block;
-    color: #F0F0F0;
-    background: green;
-    background: no-repeat center/80% url("x");
-    border: 1px #aaa solid;
-    border-radius: 10px 5% / 20px 25em 30px 35em;
+h1, p, table {
+    background-color: #ccc;
+    border: 1px solid;
+    color: #39f;
+    text-align: center;
+    width: 100%;
 }
 
-@import url(print.css);
+.addon-store .pagehead h1 { display: inline-block; }
+.addon-store .addon-summary:after { clear: both; }
+
+#addon-store .pagehead .electrocat-small {
+    bottom: -7px;
+    position: absolute;
+    right: 0;
+}
 
 @media print {
     a[href^=http]::after {
-//        ^^ source.less meta.attribute-selector.css punctuation.separator.operator.css
-//          ^^^^ source.less meta.attribute-selector.css string.unquoted.attribute-value.css
-//              ^ source.less meta.attribute-selector.css
-//               ^^ source.less entity.other.attribute-name.pseudo-element.css punctuation.definition.entity.css
-//                 ^^^^^ source.less entity.other.attribute-name.pseudo-element.css
-//                      ^^ source.less
         content: attr(href)
     }
-    * [lang^=en] {}
-    #x > .y:first-child {}
-    div.x li:hover > ul {}
-    p:first-of-type + p {}
 }
-
-@counter-style none {} /* Invalid */
-.x { var-deprecated- } /* Deprecated */
