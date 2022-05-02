@@ -1,5 +1,3 @@
-
-
     h1, p, table {
         font-family: arial;
         background-color: #ccc;
@@ -19,3 +17,29 @@
         }
     }
 
+body {
+    font-family: arial;
+}
+
+h1, p, table {
+    background-color: #ccc;
+    border: 1px solid;
+    color: #39f;
+    text-align: center;
+    width: 100%;
+}
+
+.addon-store .pagehead h1 { display: inline-block; }
+.addon-store .addon-summary:after { clear: both; }
+
+#addon-store .pagehead .electrocat-small {
+    bottom: -7px;
+    position: absolute;
+    right: 0;
+}
+
+@media print {
+    a[href^=http]::after {
+        content: attr(href)
+    }
+}
