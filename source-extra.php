@@ -8,14 +8,13 @@ class Name extends Extended implements Countable, IName
     {
         __FILE__;
         PHP_VERSION;
-        XYZ;
-        user_defined();
         phpversion();
-        error_reporting(E_ALL);
+        USER_CONSTANT;
+        user_function_call();
         $_SERVER['DOCUMENT_ROOT'];
-        $_GET['x'];
-        $_POST['x'];
-        $x = array("x" => "y", ["x" => "y"]);
+        User::class;
+        User::CONSTANT;
+        User::$x;
         parent::a();
         self::class;
         self::$x;
@@ -26,9 +25,7 @@ class Name extends Extended implements Countable, IName
         $this->a();
         $this->$x();
         $this->a()->c()->d();
-        Abcd::$x;
-        Abcd::X;
-        echo X::class;
+        $x = array("x" => "y", ["x" => "y"]);
         $x = new X();
         $x = new self();
         $x = new static();
@@ -38,9 +35,32 @@ class Name extends Extended implements Countable, IName
         $abc->$x();
         $this->x = array_merge($this->y, $z);
         $a = isset($this->b) ? $this->b->c('d') : new X();
+
+        // string interpolation
+        echo "x $x";
+        echo "x ${$x}";
+        echo "x $x[0]";
+        echo "x $x[xyz]";
+        echo "x $x->y";
+        echo "{$x} {$x->y} {$x['y']}";
+        echo "x {$x->$y}";
+        echo "x {$x->{$y[1]}} z";
+        $x = <<<EOT
+        <div>
+            <p>$x</p>
+            <p>${x}</p>
+            <p>{$x}</p>
+            <p>{ $x }</p>
+            <p>{$x[1]}</p>
+            <p>{$x['y']}</p>
+            <p>$x->y</p>
+            <p>{$x->y}</p>
+            <p>{$x->y[1]}</p>
+            <p>{$x->y()}</p>
+            <p>{$x->y()->z()}</p>
+        </div>
+EOT;
+
+
     }
 }
-
-
-
-
