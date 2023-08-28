@@ -1,21 +1,21 @@
-    h1, p, table {
-        font-family: arial;
-        background-color: #ccc;
-        border: 1px solid;
-    }
+h1, p, table {
+    font-family: arial;
+    background-color: #ccc;
+    border: 1px solid;
+}
 
-    #id .class:after h1,
-    #id > .class:first-child {
-        bottom: -7px;
-        position: absolute;
-        var-deprecated-
-    }
+#id .class:after h1,
+#id > .class:first-child {
+    bottom: -7px;
+    position: absolute;
+    var-deprecated-
+}
 
-    @media print {
-        a[href^=http]::after {
-            content: attr(href)
-        }
+@media print {
+    a[href^=http]::after {
+        content: attr(href)
     }
+}
 
 body {
     font-family: arial;
